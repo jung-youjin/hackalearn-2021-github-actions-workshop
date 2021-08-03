@@ -19,3 +19,6 @@ jobs:
 
       - name: Hello Team
         uses: ./.github/actions/hello-team
+        with:
+          member: "Youjin Kim"
+          leader: "Justin"
