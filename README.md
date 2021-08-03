@@ -13,19 +13,19 @@
    #### 2.2 - Slack PR Notifier with GitHub payload
 
 #### 1.1 Hello Team
-- go
+> go
 Workflow내 action의 input 값을 Docker env를 통해 GitHub Actions input variable로 받아와 Go main code에서 출력하는 action입니다.
 
 #### 1.2 Random Joke
-- python
+> python
 action을 구성하는 python main code에서 외부 API를 호출해 json 값을 반환하여 랜덤하게 배열 값을 골라 출력하는 action입니다. 또한 GitHub Actions 안에 다른 variable을 output으로 생성하여 다른 action에서 변수 값을 재사용할 수 있도록 구성합니다.
 
 #### 1.3 Issue Maker
-- javascript
+> javascript
 다른 action(1.2 Random Joke Action)에서 받아온 값을 활용해, 그 값을 GitHub Repository 내 Issue 생성으로 markdown 형식으로 반환해 이미지를 포함한 Issue 글을 자동으로 작성합니다. GitHub Repository를 직접적으로 접근하는 action이기 때문에, `${{ secrets.GITHUB_TOKEN }}` 이 필수적으로 필요합니다.
 
 #### 2.1 Slack PR Notifier
-- Marketplace
+> Marketplace action
 GitHub 마켓플레이스에 공개된 action을 활용하여, GitHub Repository에 Pull Request가 생성되었을 경우, Slack에 자동으로 메시지를 전송합니다. `${{ secrets.SLACK_WEBHOOK_URL }}` 은 slack api 사이트에 접속 후, App 관리를 하는 란에서 Incoming Webhook URL을 활성화하게 되면, Webhook URL이 생성됩니다. 이를 GitHub repository의 Setting > Secrets에 변수로 기입합니다.
 
 #### 2.2 Slack PR Notifier with GitHub payload
