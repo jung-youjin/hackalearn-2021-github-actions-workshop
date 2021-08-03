@@ -24,7 +24,7 @@
 ### [1.1 Hello Team](https://github.com/jung-youjin/hackalearn-2021-github-actions-workshop/blob/main/.github/actions/hello-team)
 Uses: `go`
 ```
-./github
+/.github
 ├── actions
 │   └── hello-team
 |       ├── action.yml
@@ -40,7 +40,7 @@ Workflow내 action의 input 값을 Docker env를 통해 GitHub Actions input var
 ### [1.2 Random Joke](https://github.com/jung-youjin/hackalearn-2021-github-actions-workshop/blob/main/.github/actions/random-joke)
 Uses: `python`
 ```
-./github
+/.github
 ├── actions
 │   └── random-joke
 |       ├── action.yml
@@ -58,7 +58,7 @@ action을 구성하는 python main code에서 외부 API를 호출해 json 값�
 ### [1.3 Issue Maker](https://github.com/jung-youjin/hackalearn-2021-github-actions-workshop/blob/main/.github/actions/issue-maker) 
 Uses: `javascript`
 ```
-./github
+/.github
 ├── actions
 │   └── issue-maker
 |       ├── action.yml
@@ -76,7 +76,7 @@ GitHub Repository를 직접적으로 접근하는 action이기 때문에, `${{ s
 ### [2.1 Slack PR Notifier](https://github.com/jung-youjin/hackalearn-2021-github-actions-workshop/blob/6ed2bb0becc0533b7836c22249d484ca9935839a/.github/workflows/slack-message.yml)
 Uses: `Marketplace action`
 ```
-./github
+/.github
 └── workflows
     └── slack-message.yml
 ```
