@@ -12,6 +12,6 @@ jobs:
         id: slack
         uses: slackapi/slack-github-action@v1.14.0
         with:
-          payload: '{"text": "GitHub Actions Slack PR Notifier 메시지 도착했어요!!!!"}' # This data can be any valid JSON from a previous step in the GitHub Action
+          payload: '{ "text":"<https://github.com/${{ github.repository }}/pull/${{ github.event.number }}| New Pull Request #${{ github.event.number }} by @${{ github.actor }}>\n by \n <https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}| ${{ github.workflow }} - ${{ github.job }} : ${{ job.status }}>"}' # This data can be any valid JSON from a previous step in the GitHub Action
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
