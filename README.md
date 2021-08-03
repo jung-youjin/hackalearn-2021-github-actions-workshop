@@ -88,7 +88,7 @@ GitHub 마켓플레이스에 공개된 action을 활용하여, GitHub Repository
 ### [2.2 Slack PR Notifier with GitHub payload](https://github.com/jung-youjin/hackalearn-2021-github-actions-workshop/blob/main/.github/workflows/slack-message.yml)
 Uses: `Marketplace action`
 ```
-./github
+/.github
 └── workflows
     └── slack-message.yml
 ```
