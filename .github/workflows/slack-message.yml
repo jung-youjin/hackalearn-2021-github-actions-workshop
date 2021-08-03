@@ -1,0 +1,17 @@
+name: Slack PR Notifier
+
+on: pull_request
+
+jobs:
+  action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Send GitHub Action trigger data to Slack via Message
+        id: slack
+        uses: slackapi/slack-github-action@v1.14.0
+        with:
+          payload: '{ "text":"<https://github.com/${{ github.repository }}/pull/${{ github.event.number }}| New Pull Request #${{ github.event.number }} by @${{ github.actor }}>\n by \n <https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}| ${{ github.workflow }} - ${{ github.job }} : ${{ job.status }}>"}' # This data can be any valid JSON from a previous step in the GitHub Action
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

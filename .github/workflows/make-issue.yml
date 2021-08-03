@@ -1,0 +1,20 @@
+name: Create Joke Issue
+
+on: push
+
+jobs:
+  action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Random Joke Action for team
+        uses: ./.github/actions/random-joke
+        id: random-joke
+
+      - name: Create Issue joke
+        uses: ./.github/actions/issue-maker
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          joke: ${{steps.random-joke.outputs.joke}}
+          issueTitle: "Random meme joke for team!!"
